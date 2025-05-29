@@ -1,0 +1,12 @@
+on key 'd'
+{
+  diagRequest(0x7DF, 0x22F190); // Read VIN
+}
+
+on diagResponse
+{
+  if(this.serviceId == 0x62 && this.data[0] == 0xF1 && this.data[1] == 0x90)
+  {
+    output("UDS VIN Read Successful");
+  }
+}
