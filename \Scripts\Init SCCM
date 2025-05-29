@@ -1,0 +1,15 @@
+variables
+{
+  msTimer t_main;
+}
+
+on start
+{
+  setTimer(t_main, 1000);
+  output("SCCM Test Initialization Complete.");
+}
+
+on timer t_main
+{
+  output("SCCM HIL Test Started.");
+}
